@@ -4,18 +4,19 @@ class Ave:
 
 class Aguila(Ave):
     def volar(self):
-        return "El águila vuela alto"
+        return "El aguila vuela alto"
 
 class Pinguino(Ave):
     def volar(self):
-        return "El pingüino no puede volar"
-
-# Uso
-def hacer_volar(ave):
-    print(ave.volar())
+        return "El pinguino no puede volar"
 
 aguila = Aguila()
 pinguino = Pinguino()
 
-hacer_volar(aguila)    # El águila vuela alto
-hacer_volar(pinguino)  # El pingüino no puede volar
+aves = [aguila, pinguino]
+
+def hacer_volar(ave):
+    print(ave.volar())
+
+for i in range(len(aves)):
+    hacer_volar(aves[i])

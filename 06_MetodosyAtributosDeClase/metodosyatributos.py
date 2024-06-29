@@ -9,5 +9,6 @@ class MiClase:
         return cls.contador
 
 obj1 = MiClase()
+print(MiClase.obtener_contador())
 obj2 = MiClase()
-print(MiClase.obtener_contador())  # 2
+print(MiClase.obtener_contador())

@@ -1,7 +1,6 @@
 from abc import ABC, abstractmethod
 
-
-class FiguraGeometrica(ABC):
+class Figura(ABC):
     @abstractmethod
     def area(self):
         pass
@@ -10,8 +9,7 @@ class FiguraGeometrica(ABC):
     def perimetro(self):
         pass
 
-
-class Circulo(FiguraGeometrica):
+class Circulo(Figura):
     def __init__(self, radio):
         self.radio = radio
 
@@ -21,8 +19,7 @@ class Circulo(FiguraGeometrica):
     def perimetro(self):
         return 2 * 3.14 * self.radio
 
-
-# Uso
 circulo = Circulo(5)
-print("Área del círculo:", circulo.area())  # Área del círculo: 78.5
-print("Perímetro del círculo:", circulo.perimetro())  # Perímetro del círculo: 31.400000000000002
+
+print("Area del circulo: ", circulo.area())
+print("Area del perimetro: ", circulo.perimetro())
